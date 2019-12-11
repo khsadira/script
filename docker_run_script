@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import os
+
+
+#PAGESPEED
+docker_pagespeed = "docker run -d --name pagespeed_exporter -p 9271:9271 --rm astronaute/pagespeed_exporter -api-key AIzaSyAWJ4tJ_-8qLz8y8eRjK4xRxnZGF1wJxys"
+
+#SFCC
+docker_sfcc_exporter = "docker run -p 9240:9240 --name sfcc_exporter -e API_URL_SFCC -e CLIENT_ID_SFCC -e CLIENT_PW_SFCC -d khsadira/sfcc_exporter:latest"
+#docker_sfcc_clean = "docker run -p 9250:9250 --name sfcc_clean -e CLIENT_ID_SFCC -e CLIENT_PW_SFCC -d khsadira/sfcc_clean:latest"
+
+#24x7
+docker_24x7 = "docker run -p 9231:9231 --name 24x7_exporter -e CLIENT_ID_24x7 -e CLIENT_PW_24x7 -e REFRESH_TOKEN_24x7 -d khsadira/24x7_exporter:latest"
+
+#MOZILLA_OBS
+docker_observatory = "docker run -p 9230:9230 --name observatory_exporter -d khsadira/observatory_exporter:latest"
+
+
+os.system(docker_sfcc_exporter)
+#os.system(docker_sfcc_clean)
+os.system(docker_pagespeed)
+os.system(docker_24x7)
+os.system(docker_observatory)

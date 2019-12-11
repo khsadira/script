@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import os
+
+os.system("/devops/script/auto-pull-docker_run_script")
+os.system("/devops/script/docker_run_script")
+os.system("/devops/script/nginx_run_script")
+os.system("/devops/script/prom_run_script")

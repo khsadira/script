@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import os
+
+autopull = "/devops/script/auto_pull_docker/script &"
+os.system(autopull)

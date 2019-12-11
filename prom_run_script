@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import os
+
+prometheus = "/devops/prometheus/prometheus --config.file=\"/devops/prometheus/prometheus.yml\" --web.enable-lifecycle &"
+os.system(prometheus)

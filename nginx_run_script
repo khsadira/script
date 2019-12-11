@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import os
+
+nginx = "nginx -c /etc/nginx/nginx.conf"
+os.system(nginx)

@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import os
+
+#PAGESPEED
+os.system("docker pull astronaute/pagespeed_exporter:latest")
+
+#OBSERVATORY
+os.system("docker pull khsadira/observatory_exporter:latest")
+
+#SFCC
+os.system("docker pull khsadira/sfcc_exporter:latest")
+os.system("docker pull khsadira/sfcc_clean:latest")
+
+#24x7
+os.system("docker pull khsadira/24x7_exporter:latest")

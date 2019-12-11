@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+import os
+
+os.system("/devops/script/docker_rm_script")
+os.system("/devops/script/docker_pull_script")
+os.system("/devops/script/docker_run_script")

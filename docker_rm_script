@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import os
+
+#PAGESPEED
+os.system("docker rm -f pagespeed_exporter")
+os.system("docker rmi -f astronaute/pagespeed_exporter:latest")
+
+#SFCC
+os.system("docker rm -f sfcc_exporter")
+os.system("docker rmi -f khsadira/sfcc_exporter:latest")
+os.system("docker rm -f sfcc_clean")
+os.system("docker rmi -f khsadira/sfcc_clean:latest")
+
+#24x7
+os.system("docker rm -f 24x7_exporter")
+os.system("docker rmi -f khsadira/24x7_exporter:latest")
+
+#OBSERVATORY
+os.system("docker rm -f observatory_exporter")
+os.system("docker rmi -f khsadira/observatory_exporter:latest")
